@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod Üretici Asistan</title>
+    <style>
+        body { font-family: sans-serif; padding: 2rem; background: #f7f7f7; }
+        input[type="text"] { width: 80%; padding: 10px; font-size: 1rem; }
+        button { padding: 10px 20px; font-size: 1rem; margin-left: 10px; }
+        pre { background: #eee; padding: 1rem; border-radius: 8px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>🧠 Yapay Zeka Destekli Kod Üretici</h1>
+    <form method="POST">
+        <input type="text" name="prompt" placeholder="Örn: dosya listeleyen bir Python script yaz" required />
+        <button type="submit">Gönder</button>
+    </form>
+
+    {% if title %}
+        <h2>📌 {{ title }}</h2>
+    {% endif %}
+    {% if code %}
+        <h3>💻 Üretilen Kod:</h3>
+        <pre>{{ code }}</pre>
+    {% endif %}
+</body>
+</html>
